@@ -133,7 +133,7 @@ export default function ScrollPlanes() {
         // Slight adjustment to slope to account for wider spacing
         let y = -offset * 0.17;
 
-        let targetRotateY = -50;
+        let targetRotateY = -40;
 
         // --- WAVE ---
         const sigma = 700;
