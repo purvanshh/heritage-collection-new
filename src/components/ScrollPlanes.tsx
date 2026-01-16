@@ -118,9 +118,9 @@ export default function ScrollPlanes() {
 
       // 2. Extended Fade Boundaries:
       // Old: 1500 -> 2000 (Too short, caused the blank space)
-      // New: 2000 -> 2800 (Extends almost to the wrap point)
-      const fadeStart = 2000;
-      const fadeEnd = 2800;
+      // New: 3000 -> 4800 (Keeps items visible much longer on the right side)
+      const fadeStart = 3000;
+      const fadeEnd = 4800;
 
       const viewportHeight = window.innerHeight;
 
@@ -137,7 +137,10 @@ export default function ScrollPlanes() {
         while (offset > halfWidth) offset -= totalWidth;
 
         // --- PHYSICS & POSITION ---
-        const baseAngle = -55 * (Math.PI / 180);
+        // 2. ADJUST ANGLE
+        // Old: -55. Causes items to recede too fast into the background.
+        // New: -45. Pushes items more horizontally, filling the screen width.
+        const baseAngle = -45 * (Math.PI / 180);
         let x = offset * Math.cos(baseAngle);
         let z = offset * Math.sin(baseAngle);
 
