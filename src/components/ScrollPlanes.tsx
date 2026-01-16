@@ -18,6 +18,17 @@ const images = [
   { url: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=400&h=500&fit=crop', title: 'STARRY NIGHT' },
   { url: 'https://images.unsplash.com/photo-1768215951564-7a24614516da?q=80&w=1328&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', title: 'ZENITH' },
   { url: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=400&h=500&fit=crop', title: 'CLOUDBREAK' },
+  { url: 'https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=400&h=500&fit=crop', title: 'WINTER SOLSTICE' },
+  { url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&h=500&fit=crop', title: 'DESERT DUNES' },
+  { url: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=400&h=500&fit=crop', title: 'OCEAN CLIFFS' },
+  { url: 'https://images.unsplash.com/photo-1679560051933-1d6396afd1ca?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', title: 'QUIET POND' },
+  { url: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&h=500&fit=crop', title: 'GLACIER BAY' },
+  { url: 'https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=400&h=500&fit=crop', title: 'CANYON ECHO' },
+  { url: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&h=500&fit=crop', title: 'TROPICAL STORM' },
+  { url: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=400&h=500&fit=crop', title: 'SAVANNA SUN' },
+  { url: 'https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=400&h=500&fit=crop', title: 'ARCTIC ICE' },
+  { url: 'https://images.unsplash.com/photo-1434394354979-a235cd36269d?w=400&h=500&fit=crop', title: 'MOUNTAIN PASS' },
+  { url: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=500&fit=crop', title: 'SILENT GROVE' },
 ];
 
 const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&';
@@ -328,7 +339,7 @@ export default function ScrollPlanes() {
                   letterSpacing: '0.05em',
                 }}
               >
-                {String(index + 1).padStart(2, '0')}
+                {String(index).padStart(2, '0')}
               </div>
             </div>
           ))}
@@ -349,7 +360,7 @@ export default function ScrollPlanes() {
               {images[activeImage].title}
             </h2>
             <div className="flex items-center gap-6 text-white/80 font-mono text-sm uppercase tracking-[0.2em] animate-in slide-in-from-bottom-5 duration-700 delay-200">
-              <span>Seq. {String(activeImage + 1).padStart(2, '0')}</span>
+              <span>Seq. {String(activeImage).padStart(2, '0')}</span>
               <span className="w-8 h-px bg-white/50" />
               <span>Heritage Collection</span>
             </div>
